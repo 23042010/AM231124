@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Aishwarya, My Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+      font-family: 'Segoe UI', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+  position: relative;
+  max-width: 90vw;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.4em;
+  color: #d63384;
+  font-style: italic;
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff69b4;
+  transform: rotate(45deg);
+  animation: float 10s infinite ease-in-out;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff69b4;
+  border-radius: 50%;
+}
+
+.heart::before { top: -10px; left: 0; }
+.heart::after  { left: -10px; top: 0; }
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+  100% { transform: translateY(-1000px) rotate(45deg); opacity: 0; }
+}
+
+/* Surprise button */
+#surprise-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+  background: #ff69b4;
+  color: white;
+  transition: transform 0.2s;
+}
+#surprise-btn:hover { transform: scale(1.05); }
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover, .close:focus { color: #000; }
+
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <div class="container">
+    <h1>For Aishwarya, Who Makes My Heart Smile</h1>
+    <p>“You are the poem I never knew how to write,<br>And this heart is the ink that only beats for you.”</p>
+    <button id="surprise-btn">Click here for a surprise!</button>
+    <div class="hearts"></div>
+  </div>  <!-- Modal Structure -->  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Surprise, Aishwarya!</h2>
+      <p>You are the sunshine to my heart and my forever love.</p>
+    </div>
+  </div>  <!-- Scripts -->  <script>
+    // Floating hearts
+    for (let i = 0; i < 40; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.querySelector('.hearts').appendChild(heart);
+    }
+
+    // Modal functionality
+    const btn = document.getElementById('surprise-btn');
+    const modal = document.getElementById('modal');
+    const close = document.getElementById('close-modal');
+
+    btn.onclick = () => { modal.style.display = 'block'; };
+    close.onclick = () => { modal.style.display = 'none'; };
+    window.onclick = event => {
+      if (event.target === modal) modal.style.display = 'none';
+    };
+  </script></body>
+</html>
