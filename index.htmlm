@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Hansika</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f6;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #ff7f9d;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #f28cb1;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .heart-section {
+            margin-top: 30px;
+        }
+
+        .heart-btn {
+            padding: 15px 30px;
+            background-color: #ff99cc;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .heart-btn:hover {
+            background-color: #ff66b2;
+        }
+
+        #hearts {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #f28cb1;
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>For My Dearest Hansika</h1>
+        <p class="intro">"Ever since you walked into my life, everything’s just been a dream. Seriously, every time I see you, I can’t help but want to pull you close, kiss you like there’s no tomorrow, and just cuddle up with you. The moments we share feel like they’re flying by too fast, and all I want is more of them with you. I swear, every time I look at you, I fall deeper and deeper. Hansika, you’ve completely stolen my heart, and I can’t imagine my world without you in it. I want to spend forever with you, make memories, have our little family of five, and just grow old together, living our own fairy tale. You’ve got that spark that no one else does, and I’d love to make a reel with you...because honestly, you're my everything. You’re so much more than just special to me – you're my entire world."</p>
+    </header>
+
+    <section class="heart-section">
+        <button id="heartButton" class="heart-btn">Click for a Heart</button>
+        <div id="hearts"></div>
+    </section>
+
+    <footer>
+        <p>With love, <strong>Your Special One</strong></p>
+    </footer>
+
+    <audio controls autoplay loop>
+        <source src="music/finding-her<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f6;
+        }
+        h1 {
+            color: #ff7f9d;
+        }
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listen to My Favorite Song</h1>
+    <audio controls autoplay loop>
+        <source src="music/finding-her.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+    </html>.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.getElementById('heartButton').addEventListener('click', function() {
+            let heartContainer = document.getElementById('hearts');
+            
+            // Create random flower, teddy bear, or hello kitty images
+            let images = ['https://via.placeholder.com/50?text=❤️', 'https://via.placeholder.com/50?text=🐻', 'https://via.placeholder.com/50?text=🌸'];
+            let randomImage = images[Math.floor(Math.random() * images.length)];
+            
+            let heart = document.createElement('img');
+            heart.src = randomImage;
+            heart.style.width = '50px';
+            heart.style.height = '50px';
+            heart.style.animation = 'pop 1s ease-in-out';
+            
+            heartContainer.appendChild(heart);
+            
+            // Remove hearts after a certain time
+            setTimeout(function() {
+                heart.remove();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
